@@ -1,0 +1,82 @@
+.nav_color {
+  background-color: #00285d;
+}
+
+.bg_footer {
+  background-color: #00285d;
+}
+
+.card {
+  color: white;
+  background-image: url("https://unsplash.it/400");
+  background-size: cover;
+  padding: 10rem 0 0;
+  max-width: 280px;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 500ms ease;
+}
+
+.cards {
+  color: white;
+  background-color: #00285d;
+  background-size: cover;
+  padding: 10rem 0 0;
+  max-width: 280px;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 500ms ease;
+}
+
+.card-content {
+  padding: 1.5rem;
+  background: linear-gradient(black, rgba(0, 0, 0, 0.5));
+}
+
+.item {
+  padding: 1rem;
+}
+.contact {
+  display: flex;
+  justify-content: center;
+}
+
+.help {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+@media (min-width: 768px) {
+  .suscribirse {
+    width: 50%;
+  }
+}
+
+@media (hover) {
+  .card-content {
+    transform: translateY(65%);
+    transition: transform 500ms ease;
+  }
+  .card:hover .card-content {
+    transform: translateY(0);
+    transition-delay: 500ms;
+  }
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 0.2rem 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.5s ease;
+}
+
+.button:hover,
+.button:focus {
+  background-color: white;
+  color: black;
+}
