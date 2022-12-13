@@ -11,7 +11,6 @@
   background-image: url("../img/productos.png");
   background-size: cover;
 }
-
 .card-e {
   background-image: url("../img/empresa.png");
   background-size: cover;
@@ -62,54 +61,3 @@
   background-color: white;
   color: black;
 }
-
-nav {
-  background-color: #00285d;
-}
-
-@media (min-width: 768px) {
-  .suscribirse {
-    width: 50%;
-  }
-}
-@media (hover) {
-  .card-content {
-    transform: translateY(65%);
-    transition: transform 500ms ease;
-  }
-  .card:hover .card-content {
-    transform: translateY(0);
-    transition-delay: 500ms;
-  }
-}
-.bg_footer {
-  background-color: #00285d;
-}
-
-.cards {
-  color: white;
-  background-color: #00285d;
-  background-size: cover;
-  padding: 10rem 0 0;
-  max-width: 280px;
-  border-radius: 1rem;
-  overflow: hidden;
-  transition: transform 500ms ease;
-}
-
-.contact {
-  display: flex;
-  justify-content: center;
-}
-
-.help {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
-
-.item {
-  margin: 1rem 0;
-}
-
-/*# sourceMappingURL=style.css.map */

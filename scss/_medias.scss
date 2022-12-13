@@ -1,0 +1,16 @@
+@media (min-width: 768px) {
+  .suscribirse {
+    width: 50%;
+  }
+}
+
+@media (hover) {
+  .card-content {
+    transform: translateY(65%);
+    transition: transform 500ms ease;
+  }
+  .card:hover .card-content {
+    transform: translateY(0);
+    transition-delay: 500ms;
+  }
+}

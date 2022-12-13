@@ -1,0 +1,10 @@
+.cards {
+  color: white;
+  background-color: $base-color;
+  background-size: cover;
+  padding: 10rem 0 0;
+  max-width: 280px;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 500ms ease;
+}

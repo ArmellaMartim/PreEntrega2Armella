@@ -25,120 +25,121 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg nav_color fixed-top">
-      <div class="container">
-        <a class="navbar-brand text-light" href="../index.html">
-          Osteo-Store
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active text-light mx-1" href="../index.html"
-                >Inicio</a
+    <header>
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-lg nav_color fixed-top">
+        <div class="container">
+          <a class="navbar-brand text-light" href="../index.html">
+            Osteo-Store
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-light mx-1" href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-light mx-1"
+                  href="../Pages/Empresa.html"
+                  >Empresa</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-light mx-1"
+                  href="../Pages/Productos.html"
+                  >Producto</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-light mx-1"
+                  href="../Pages/Ayuda.html"
+                  >Ayuda</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-light mx-1"
+                  href="../Pages/Contacto.html"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="Buscar"
+                placeholder="Buscar"
+                aria-label="Buscar"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Buscar
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container my-5">
+        <div class="contact">
+          <form action="">
+            <fieldset>
+              <legend>Contactenos</legend>
+              <div class="item">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" />
+              </div>
+              <div class="item">
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido" />
+              </div>
+              <div class="item">
+                <label for="telefono">Telefono</label>
+                <input type="text" name="telefono" id="telefono" />
+              </div>
+              <div class="item">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" />
+              </div>
+              <div class="item">Acepta recibir noticias y publicidad</div>
+              <div>
+                <input type="checkbox" name="acepta" id="acepta" value="1" />
+              </div>
+              <div class="item">
+                <label for="departamento">Departamento</label>
+                <select name="departamento" id="departamento">
+                  <option value="informacion">Informacion</option>
+                  <option value="ventas">Ventas</option>
+                  <option value="logistica">Logistica</option>
+                  <option value="administracion">Administracion</option>
+                  <option value="recursosHumanos">Recursos Humanos</option>
+                </select>
+              </div>
+              <textarea name="mensaje" id="mensaje" cols="30" rows="10">
+ Ingrese su mensaje</textarea
               >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active text-light mx-1"
-                href="../Pages/Empresa.html"
-                >Empresa</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active text-light mx-1"
-                href="../Pages/Productos.html"
-                >Producto</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active text-light mx-1"
-                href="../Pages/Ayuda.html"
-                >Ayuda</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active text-light mx-1"
-                href="../Pages/Contacto.html"
-                >Contacto</a
-              >
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="Buscar"
-              placeholder="Buscar"
-              aria-label="Buscar"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Buscar
-            </button>
+              <div class="item">
+                <input type="submit" value="Enviar" />
+                <input type="reset" value="Reset" />
+              </div>
+            </fieldset>
           </form>
         </div>
-      </div>
-    </nav>
-    <main>
-      <div class="contact">
-        <form action="">
-          <fieldset>
-            <legend>Contactenos</legend>
-            <div class="item">
-              <label for="nombre">Nombre</label>
-              <input type="text" name="nombre" id="nombre" />
-            </div>
-            <div class="item">
-              <label for="apellido">Apellido</label>
-              <input type="text" name="apellido" id="apellido" />
-            </div>
-            <div class="item">
-              <label for="telefono">Telefono</label>
-              <input type="text" name="telefono" id="telefono" />
-            </div>
-            <div class="item">
-              <label for="email">Email</label>
-              <input type="text" name="email" id="email" />
-            </div>
-            <div class="item">Acepta recibir noticias y publicidad</div>
-            <div>
-              <input type="checkbox" name="acepta" id="acepta" value="1" />
-            </div>
-            <div class="item">
-              <label for="departamento">Departamento</label>
-              <select name="departamento" id="departamento">
-                <option value="informacion">Informacion</option>
-                <option value="ventas">Ventas</option>
-                <option value="logistica">Logistica</option>
-                <option value="administracion">Administracion</option>
-                <option value="recursosHumanos">Recursos Humanos</option>
-              </select>
-            </div>
-            <textarea
-              name="mensaje"
-              id="mensaje"
-              cols="30"
-              rows="10"
-            ></textarea>
-            <div class="item">
-              <input type="submit" value="Enviar" />
-              <input type="reset" value="Reset" />
-            </div>
-          </fieldset>
-        </form>
       </div>
     </main>
     <!-- FOOTER -->
