@@ -1,3 +1,15 @@
+section {
+  background-color: $suscribe-color;
+
+  h3 {
+    color: $suscribe-title-color;
+    text-decoration: underline;
+  }
+}
+h5 {
+  color: $carusel-title-color;
+}
+
 .card {
   color: white;
   padding: 10rem 0 0;
