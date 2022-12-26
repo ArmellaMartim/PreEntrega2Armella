@@ -1,5 +1,10 @@
-h1 {
-  @include title(center, black, 2.5rem);
+.page {
+  &__h1 {
+    @include title(center, $base-color, 4rem);
+  }
+  &__p {
+    @include title(center, black, 1rem);
+  }
 }
 
 section {

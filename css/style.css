@@ -1,3 +1,14 @@
+.page__h1 {
+  text-align: center;
+  color: #00285d;
+  font-size: 4rem;
+}
+.page__p {
+  text-align: center;
+  color: black;
+  font-size: 1rem;
+}
+
 section {
   background-color: rgb(74, 74, 248);
 }
