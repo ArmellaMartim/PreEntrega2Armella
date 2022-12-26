@@ -1,0 +1,8 @@
+@mixin title($align, $color, $size) {
+  text-align: $align;
+  color: $color;
+  font-size: $size;
+}
+.page__h1 {
+  @include title(center, black, 2.5rem);
+}
