@@ -105,6 +105,11 @@ nav {
     transition-delay: 500ms;
   }
 }
+@media (max-width: 768px) {
+  .page__h1 {
+    font-size: 2rem;
+  }
+}
 .bg_footer {
   background-color: #00285d;
 }
