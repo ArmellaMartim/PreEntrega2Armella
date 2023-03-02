@@ -58,6 +58,27 @@ function Carrito() {
     }
   };
   this.getCarrito = JSON.parse(localStorage.getItem("carrito"));
+  this.agregarItem = function(item){
+    for(i of this.catalogo){
+      if(i.id === item){
+        let registro = i
+      }
+    }
+    if(!registro){
+      return
+    }
+
+    for(i of this.getCarrito){
+      if(i.id === item){
+        i.cantidad++;
+        localStorage.setItem("carrito",JSON.stringify(this.getCarrito))
+        return
+      }
+    }
+    registro.cantidad = 1;
+    this.getCarrito.push(registro);
+    localStorage.setItem("carrito",JSON.stringify(this.getCarrito))
+  }
 }
 
 function VerCarrito() {
@@ -93,4 +114,11 @@ let carritoVer = new VerCarrito();
 document.addEventListener("DOMContentLoaded", function () {
   carritoVer.renderCatalogo();
   carrito.constructor();
+  $("#catalogo").addEventListener("click", function(ev){
+    ev.preventDefault();
+    if(ev.target.id == "addItem"){
+      let id = ev.target.dataset.producto;
+      carrito.agregarItem(id);
+    }
+  })
 });
