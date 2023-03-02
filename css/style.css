@@ -21,7 +21,7 @@ h5 {
   color: rgb(89, 89, 248);
 }
 
-.card {
+.cards {
   color: white;
   padding: 10rem 0 0;
   max-width: 280px;
@@ -50,14 +50,10 @@ h5 {
   background-size: cover;
 }
 
-.card:hover,
-.card:focus-within {
-  transform: scale(1.05);
-}
-
+.cards:hover,
 .card-content {
   padding: 1.5rem;
-  background: linear-gradient(black, rgba(0, 0, 0, 0.5));
+  background: linear-gradient(rgb(240, 3, 3), rgba(0, 0, 0, 0.5));
 }
 
 .card-content__title {
@@ -134,5 +130,28 @@ nav {
 .item {
   margin: 1rem 0;
 }
+/* ? SHOPPING CART */
+.shopping-cart-items {
+  padding: 20px 0px;
+}
 
-/*# sourceMappingURL=style.css.map */
+.shopping-cart-header {
+  border-bottom: 1px solid #ccc;
+}
+
+.shopping-cart-image {
+  max-width: 80px;
+  border-radius: 20px;
+}
+
+.shopping-cart-quantity-input {
+  max-width: 45px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #eee;
+  padding: 5px;
+}
+
+.shopping-cart-total {
+  min-height: 96px;
+}

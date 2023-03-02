@@ -7,7 +7,7 @@
   }
 }
 
-section {
+sections {
   background-color: $suscribe-color;
 
   h3 {
@@ -19,7 +19,7 @@ h5 {
   color: $carusel-title-color;
 }
 
-.card {
+.cards {
   color: white;
   padding: 10rem 0 0;
   max-width: 280px;
@@ -28,45 +28,40 @@ h5 {
   transition: transform 500ms ease;
 }
 
-.card-p {
+.cards-p {
   background-image: url("../img/productos.png");
   background-size: cover;
 }
-.card-e {
+.cards-e {
   background-image: url("../img/empresa.png");
   background-size: cover;
 }
 
-.card-a {
+.cards-a {
   background-image: url("../img/ayuda.png");
   background-size: cover;
 }
 
-.card-c {
+.cards-c {
   background-image: url("../img/contacto.png");
   background-size: cover;
 }
 
-.card:hover,
-.card:focus-within {
-  transform: scale(1.05);
-}
-
-.card-content {
+.cards-content {
   padding: 1.5rem;
   background: linear-gradient(black, rgba(0, 0, 0, 0.5));
 }
 
-.card-content__title {
+.cards-content__title {
   text-decoration: underline;
   text-decoration-color: lightgray;
 }
 
-.card-content__body {
+.cards-content__body {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.button {
+.buttons {
   cursor: pointer;
   display: inline-block;
   text-decoration: none;
@@ -77,8 +72,8 @@ h5 {
   transition: all 0.5s ease;
 }
 
-.button:hover,
-.button:focus {
+.buttons:hover,
+.buttons:focus {
   background-color: white;
   color: black;
 }

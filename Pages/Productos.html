@@ -98,6 +98,16 @@
                 Buscar
               </button>
             </form>
+            <p class="control">
+              <a href="#" id="btn_carrito" class="button is-info">
+                <span class="icon">
+                  <i class="bi bi-facebook"></i>
+                </span>
+                <span class="tag is-gray" id="totalProductos"
+                  ><strong>0</strong></span
+                >
+              </a>
+            </p>
           </div>
         </div>
       </nav>
@@ -110,46 +120,119 @@
         firma
       </p>
     </div>
-    <main class="p-5">
+    <!-- CATALOGO DE PRODUCTOS -->
+    <section class="section">
+      <div class="container col-md mb-3">
+        <div class="columns is-multiline" id="catalogo"></div>
+      </div>
+    </section>
+
+    <!-- carrito -->
+    <section class="modal-card-body">
+      <div class="columns" id="productosCarrito-header">
+        <div class="column is-3 has-text-centered">Producto</div>
+        <div class="column is-3 has-text-centered">Nombre</div>
+        <div class="column is-2 has-text-centered">Precio</div>
+        <div class="column is-1 has-text-centered">Cant</div>
+        <div class="column is-2 has-text-centered">Total</div>
+        <div class="column is-1 has-text-centered">Quitar</div>
+      </div>
+      <div id="productosCarrito">
+        <!-- <!--      <!-- PRODUCTOS AGREGADOS AL CARRITO -->
+      </div>
+      <div class="columns">
+        <div class="column is-9 has-text-right">
+          <h1 class="title">TOTAL:</h1>
+        </div>
+        <div class="column is-3 has-text-centered">
+          <p class="title is-3" id="totalCarrito"><strong>$0</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- modal -->
+    <!-- <div class="modal" id="modal">
+      <div class="modal-background toggle"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Carrito</p>
+          <button type="button" name="button" class="delete toggle"></button>
+        </header>
+        <section class="modal-card-body">
+          <div class="columns" id="productosCarrito-header">
+            <div class="column is-3 has-text-centered">Producto</div>
+            <div class="column is-3 has-text-centered">Nombre</div>
+            <div class="column is-2 has-text-centered">Precio</div>
+            <div class="column is-1 has-text-centered">Cant</div>
+            <div class="column is-2 has-text-centered">Total</div>
+            <div class="column is-1 has-text-centered">Quitar</div>
+          </div>
+          <div id="productosCarrito">
+            <!-- PRODUCTOS AGREGADOS AL CARRITO -->
+    <!--   </div>
+          <div class="columns">
+            <div class="column is-9 has-text-right">
+              <h1 class="title">TOTAL:</h1>
+            </div>
+            <div class="column is-3 has-text-centered">
+              <p class="title is-3" id="totalCarrito"><strong>$0</strong></p>
+            </div>
+          </div>
+        </section>
+        <footer class="modal-card-foot">
+          <a href="#" class="button is-success">Comprar</a>
+          <a href="#" class="button toggle">Cerrar</a>
+        </footer>
+      </div>
+    </div> -->
+
+    <!--  <main class="p-5">
       <div class="row">
         <div class="cards border border-primary m-3">
           <h2 class="card__title">Ayuda para la movilidad</h2>
           <div>
             <img src="../img/Andador.jpg" alt="" class="img-fluid" />
           </div>
+          <button id="botonCarrito">agregar</button>
         </div>
         <div class="cards border border-primary m-3">
           <h2 class="card__title">Ayuda para el baño</h2>
           <div>
             <img src="../img/silla de ducha.jpg" alt="" class="img-fluid" />
           </div>
+          <button id="botonCarrito">agregar</button>
         </div>
         <div class="cards border border-primary m-3">
           <h2 class="card__title">Silla de ruedas</h2>
           <div>
             <img src="../img/silla de rueda.jpg" alt="" class="img-fluid" />
           </div>
+          <button id="botonCarrito">agregar</button>
         </div>
         <div class="cards border border-primary m-3">
           <h2 class="card__title">Descartables</h2>
           <div>
             <img src="../img/guantes.jpg" alt="" class="img-fluid" />
           </div>
+          <button id="botonCarrito">agregar</button>
         </div>
         <div class="cards border border-primary m-3">
           <h2 class="card__title">Vendaje</h2>
           <div>
             <img src="../img/venda.jpg" alt="" class="img-fluid" />
           </div>
+          <button id="botonCarrito">agregar</button>
         </div>
         <div class="cards border border-primary m-3">
           <h2 class="card__title">Cuidado y bienestar</h2>
           <div>
             <img src="../img/nebulizador.jpg" alt="" class="img-fluid" />
           </div>
+          <button id="botonCarrito">agregar</button>
         </div>
       </div>
-    </main>
+      <div id="tabla-carrito"></div>
+    </main> -->
     <!-- FOOTER -->
     <footer>
       <section class="bg-light">
@@ -194,5 +277,6 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script src="../index.js"></script>
   </body>
 </html>
