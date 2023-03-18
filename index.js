@@ -1,57 +1,40 @@
 function $(selector) {
   return document.querySelector(selector);
 }
+
+let catalog = document.querySelector("#catalogo");
+const verProductos = (catalog , elemento)=> {
+  catalog.innerHTML += `
+   <div class="column is-one-quarter">
+     <div class="card">
+       <div class="card-image">
+           <img src="${elemento.images}" alt="Placeholder">
+       </div>
+       <div class="card-content">
+           <h2 class="title is-3">${elemento.title}</h2>
+           <p>${elemento.description}</p>
+           <br>
+           <h3 class="subtitle is-4">Precio: <strong>$${elemento.price}</strong></h3>
+       </div>
+       <div class="card-footer">
+           <a href="#" class="card-footer-item" id="addItem" data-producto="${elemento.id}">Agregar al Carrito</a>
+       </div>
+     </div>
+   </div>
+   `;
+}
+
+
+
+
 function Carrito() {
-  this.catalogo = [
-    {
-      id: "P01",
-      nombre: "Andador",
-      precio: 3000,
-      imagen: "Andador.png",
-      descripcion:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    },
-    {
-      id: "P02",
-      nombre: "Silla de ducha",
-      precio: 5000,
-      imagen: "silla de ducha.jpg",
-      descripcion:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    },
-    {
-      id: "P03",
-      nombre: "Silla de ruedas",
-      precio: 13000,
-      imagen: "silla de rueda.jpg",
-      descripcion:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    },
-    {
-      id: "P04",
-      nombre: "Guantes",
-      precio: 1500,
-      imagen: "guantes.jpg",
-      descripcion:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    },
-    {
-      id: "P06",
-      nombre: "Venda",
-      precio: 750,
-      imagen: "venda.jpg",
-      descripcion:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    },
-    {
-      id: "P07",
-      nombre: "Nebulizador",
-      precio: 12000,
-      imagen: "nebulizador.jpg",
-      descripcion:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    },
-  ];
+   this.catalogo = async () =>{
+    const data = await fetch('https://dummyjson.com/products');
+    const res = await data.json();
+    res.products.forEach((element) => {
+      verProductos(catalog, element)
+    });
+   }  
   this.constructor = function () {
     if (!localStorage.getItem("carrito")) {
       localStorage.setItem("carrito", "[]");
@@ -59,7 +42,7 @@ function Carrito() {
   };
   this.getCarrito = JSON.parse(localStorage.getItem("carrito"));
   this.agregarItem = function(item){
-    for(i of this.catalogo){
+    for(i of this.catalogo.res){
       if(i.id === item){
         let registro = i
       }
@@ -87,9 +70,9 @@ function VerCarrito() {
     for (let i in carrito.catalogo) {
       template += `
             <div class="column is-one-quarter">
-            <div class="card">
+              <div class="card">
                 <div class="card-image">
-                    <img src="../img/${carrito.catalogo[i].imagen}" alt="Placeholder">
+                    <img src="${carrito.catalogo[i].images}" alt="Placeholder">
                 </div>
                 <div class="card-content">
                     <h2 class="title is-3">${carrito.catalogo[i].nombre}</h2>
@@ -100,7 +83,7 @@ function VerCarrito() {
                 <div class="card-footer">
                     <a href="#" class="card-footer-item" id="addItem" data-producto="${carrito.catalogo[i].id}">Agregar al Carrito</a>
                 </div>
-                </div>
+              </div>
             </div>
             `;
     }
@@ -112,7 +95,7 @@ let carrito = new Carrito();
 let carritoVer = new VerCarrito();
 
 document.addEventListener("DOMContentLoaded", function () {
-  carritoVer.renderCatalogo();
+  carrito.catalogo();
   carrito.constructor();
   $("#catalogo").addEventListener("click", function(ev){
     ev.preventDefault();
